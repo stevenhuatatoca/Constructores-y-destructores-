@@ -1,0 +1,25 @@
+# main.py
+
+class Recurso:
+    def __init__(self, nombre):
+        """
+        Constructor de la clase Recurso.
+        Se llama automáticamente al crear una instancia de la clase.
+        
+        :param nombre: Nombre del recurso.
+        """
+        self.nombre = nombre
+        print(f"Recurso '{self.nombre}' inicializado.")
+
+    def __del__(self):
+        """
+        Destructor de la clase Recurso.
+        Se llama automáticamente cuando la instancia es eliminada o el programa termina.
+        """
+        print(f"Recurso '{self.nombre}' destruido.")
+
+# Creación de una instancia de Recurso
+recurso = Recurso("Base de Datos")
+
+# Al finalizar el programa o eliminar el objeto, se llamará al destructor
+del recurso
